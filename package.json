@@ -4,6 +4,8 @@
   "description": "API from scratch",
   "main": "index.js",
   "scripts": {
+    "dev": "ts-node-dev src/index.ts",
+    "start": "node build/index.js",
     "tsc": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,6 +13,7 @@
   "license": "ISC",
   "devDependencies": {
     "@types/express": "5.0.1",
+    "ts-node-dev": "^2.0.0",
     "typescript": "5.8.3"
   },
   "dependencies": {
