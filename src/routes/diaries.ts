@@ -13,8 +13,17 @@ router.get('/:id', (req, res) => {
   res.send(entry)
 })
 
-router.post('/', (_req, res) => {
-  res.send('Saving a diary entry...')
+router.post('/', (req, res) => {
+  const { date, weather, visibility, comment } = req.body
+
+  const newDiaryEntry = diaryServices.addDiary({
+    date,
+    weather,
+    visibility,
+    comment
+  })
+
+  res.json(newDiaryEntry)
 })
 
 export default router
